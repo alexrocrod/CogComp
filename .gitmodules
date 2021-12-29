@@ -1,0 +1,9 @@
+[submodule "Essay/Essay/emnnist"]
+	path = Essay/Essay/emnnist
+	url = https://github.com/aurelienduarte/emnist.git
+[submodule "Essay/emnnist"]
+	path = Essay/emnnist
+	url = https://github.com/aurelienduarte/emnist.git
+[submodule "Essay/omniglot"]
+	path = Essay/omniglot
+	url = https://github.com/brendenlake/omniglot.git
