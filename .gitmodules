@@ -7,3 +7,6 @@
 [submodule "Essay/omniglot"]
 	path = Essay/omniglot
 	url = https://github.com/brendenlake/omniglot.git
+[submodule "Essay/python/DBN_master"]
+	path = Essay/python/DBN_master
+	url = https://github.com/flavio2018/Deep-Belief-Network-pytorch.git
