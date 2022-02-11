@@ -1,0 +1,67 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{emnist}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=632e47c0e294f0fbd414a2b1a7898b32}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2f60c8f4393827d484d302b2ad08da36}{%
+           family={Afshar},
+           familyi={A\bibinitperiod},
+           given={Saeed},
+           giveni={S\bibinitperiod}}}%
+        {{hash=41ebea77d8d9e72f4b00f85eaefd289c}{%
+           family={Tapson},
+           familyi={T\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=95e1e189289941a4add250f0a5be91c7}{%
+           family={Schaik},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{48d5794beba69e60dd80f6921903a6d7}
+      \strng{fullhash}{29d5cb5d166375a61bf91f2e79e7354a}
+      \strng{bibnamehash}{29d5cb5d166375a61bf91f2e79e7354a}
+      \strng{authorbibnamehash}{29d5cb5d166375a61bf91f2e79e7354a}
+      \strng{authornamehash}{48d5794beba69e60dd80f6921903a6d7}
+      \strng{authorfullhash}{29d5cb5d166375a61bf91f2e79e7354a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{{EMNIST}: an extension of {MNIST} to handwritten letters}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1702.05373
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
