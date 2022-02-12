@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.11)  12 FEB 2022 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.11)  12 FEB 2022 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,67 +596,69 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 (C:\Users\xandr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./images//0.1_1.png, id=1, 595.22375pt x 580.1675pt>
-File: ./images//0.1_1.png Graphic file (type png)
-<use ./images//0.1_1.png>
-Package pdftex.def Info: ./images//0.1_1.png  used on input line 71.
-(pdftex.def)             Requested size: 318.66948pt x 310.60342pt.
-
 [1
 
 {C:/Users/xandr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<./images//0.1_2.png, id=11, 595.22375pt x 580.1675pt>
+<./images//0.1_1.png, id=11, 595.22375pt x 580.1675pt>
+File: ./images//0.1_1.png Graphic file (type png)
+<use ./images//0.1_1.png>
+Package pdftex.def Info: ./images//0.1_1.png  used on input line 120.
+(pdftex.def)             Requested size: 220.8426pt x 215.25172pt.
+<./images//0.1_2.png, id=13, 595.22375pt x 580.1675pt>
 File: ./images//0.1_2.png Graphic file (type png)
 <use ./images//0.1_2.png>
-Package pdftex.def Info: ./images//0.1_2.png  used on input line 78.
-(pdftex.def)             Requested size: 318.66948pt x 310.60342pt.
- [2 <./images//0.1_1.png>]
-<./images//dend1.png, id=16, 867.24pt x 262.9825pt>
+Package pdftex.def Info: ./images//0.1_2.png  used on input line 126.
+(pdftex.def)             Requested size: 220.8426pt x 215.25172pt.
+ [2]
+<./images//dend1.png, id=17, 867.24pt x 262.9825pt>
 File: ./images//dend1.png Graphic file (type png)
 <use ./images//dend1.png>
-Package pdftex.def Info: ./images//dend1.png  used on input line 89.
-(pdftex.def)             Requested size: 450.69417pt x 136.67142pt.
-<./images//dend2.png, id=17, 867.24pt x 262.9825pt>
+Package pdftex.def Info: ./images//dend1.png  used on input line 140.
+(pdftex.def)             Requested size: 364.19667pt x 110.43985pt.
+<./images//dend2.png, id=18, 867.24pt x 262.9825pt>
 File: ./images//dend2.png Graphic file (type png)
 <use ./images//dend2.png>
-Package pdftex.def Info: ./images//dend2.png  used on input line 96.
-(pdftex.def)             Requested size: 450.69417pt x 136.67142pt.
- [3 <./images//0.1_2.png> <./images//dend1.png>]
-<./images//confmatBlue2.png, id=23, 864.22874pt x 863.225pt>
+Package pdftex.def Info: ./images//dend2.png  used on input line 147.
+(pdftex.def)             Requested size: 364.19667pt x 110.43985pt.
+<./images//confmatBlue2.png, id=19, 864.22874pt x 863.225pt>
 File: ./images//confmatBlue2.png Graphic file (type png)
 <use ./images//confmatBlue2.png>
-Package pdftex.def Info: ./images//confmatBlue2.png  used on input line 110.
-(pdftex.def)             Requested size: 318.66948pt x 318.295pt.
-<./images//noise2.png, id=24, 387.4475pt x 279.0425pt>
+Package pdftex.def Info: ./images//confmatBlue2.png  used on input line 158.
+(pdftex.def)             Requested size: 273.14923pt x 272.82616pt.
+
+[3 <./images//0.1_1.png> <./images//0.1_2.png> <./images//dend1.png> <./images/
+/dend2.png>]
+<./images//noise2.png, id=27, 387.4475pt x 279.0425pt>
 File: ./images//noise2.png Graphic file (type png)
 <use ./images//noise2.png>
-Package pdftex.def Info: ./images//noise2.png  used on input line 121.
-(pdftex.def)             Requested size: 318.66948pt x 229.51035pt.
- [4 <./images//dend2.png> <./images//confmatBlue2.png>] [5 <./images//noise2.pn
-g>]
+Package pdftex.def Info: ./images//noise2.png  used on input line 169.
+(pdftex.def)             Requested size: 227.62206pt x 163.93535pt.
+ [4 <./images//confmatBlue2.png> <./images//noise2.png>] [5]
 (relatorio.aux)
 Package logreq Info: Writing requests to 'relatorio.run.xml'.
 \openout1 = `relatorio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12756 strings out of 478584
- 239791 string characters out of 2844401
- 932858 words of memory out of 3000000
- 30802 multiletter control sequences out of 15000+600000
- 477177 words of font info for 58 fonts, out of 8000000 for 9000
+ 12774 strings out of 478584
+ 240069 string characters out of 2844401
+ 935908 words of memory out of 3000000
+ 30819 multiletter control sequences out of 15000+600000
+ 477485 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,68p,1057b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,68p,1057b,1235s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr17.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/xandr/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relatorio.pdf (5 pages, 800893 bytes).
+cmbx10.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/xandr/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/xandr/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/xandr/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/xandr/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/xandr/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on relatorio.pdf (5 pages, 825649 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

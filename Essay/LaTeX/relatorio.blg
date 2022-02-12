@@ -1,15 +1,15 @@
-[1] Config.pm:307> INFO - This is Biber 2.17
-[1] Config.pm:310> INFO - Logfile is 'relatorio.blg'
-[424] biber-MSWIN64:340> INFO - === 
-[573] Biber.pm:418> INFO - Reading 'relatorio.bcf'
-[960] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
-[1029] Biber.pm:4383> INFO - Processing section 0
-[1071] Biber.pm:4574> INFO - Looking for bibtex file 'biblio.bib' for section 0
-[1238] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1256] bibtex.pm:1518> INFO - Found BibTeX data source 'biblio.bib'
-[1344] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1344] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1344] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en_US'
-[1345] Biber.pm:4209> INFO - No sort tailoring available for locale 'en_US'
-[1350] bbl.pm:654> INFO - Writing 'relatorio.bbl' with encoding 'UTF-8'
-[1352] bbl.pm:757> INFO - Output to relatorio.bbl
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'relatorio.blg'
+[244] biber-MSWIN64:340> INFO - === 
+[328] Biber.pm:418> INFO - Reading 'relatorio.bcf'
+[561] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
+[590] Biber.pm:4383> INFO - Processing section 0
+[612] Biber.pm:4574> INFO - Looking for bibtex file 'biblio.bib' for section 0
+[732] bibtex.pm:1713> INFO - LaTeX decoding ...
+[741] bibtex.pm:1518> INFO - Found BibTeX data source 'biblio.bib'
+[811] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[811] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[812] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en_US'
+[812] Biber.pm:4209> INFO - No sort tailoring available for locale 'en_US'
+[814] bbl.pm:654> INFO - Writing 'relatorio.bbl' with encoding 'UTF-8'
+[816] bbl.pm:757> INFO - Output to relatorio.bbl

@@ -27,87 +27,135 @@
 	
 	\section{Introduction}
 	
-		The EMNIST\cite{emnist} Balanced dataset is a more complete letter recognition dataset.
-		The balanced slip has 47 classes - digits (0-9), uppercase letters (A-Z), some lowercase letters (a,b,d,e,f,g,h,n,q,r,t), a total of 131600 samples....
+		The EMNIST \cite{emnist} Balanced dataset is derived from the NIST Special Database 19.
+		It has 47 classes: digits (0-9), uppercase letters (A-Z), some lowercase letters (a,b,d,e,f,g,h,n,q,r,t).
+		Consists in a total of 131600 samples, 112800 being for training and 18800 for testing.
+		It provides a consistent and fair classification, with equal number of samples for each class, despite being sufficiently challenging. 
 		
-			
-		a Deep Belief Network is a stack of Restricted Boltzmann Machines, another kind of energy-based model;
-		they are unsupervised deep learning architectures that learn a probability distribution that could have generated the training data;
-		this means they can be used to run both forwards and backwards passes through the architecture, to compute either hidden representations, or "prototypical" examples of a class based on the learned probability distributions;
-		they are trained using an algorithm called contrastive divergence, whose goal is to reduce the difference between the learned probability distribution and the true one.
+		A possible neural network used to model and classify these samples is the Deep Belief Network.
+		It consists in a composition of Restricted Boltzmann Machines, the hidden layer of one serves as visible layer of the next.
+		
+		A RBM is generative stochastic neural network used to learn the probability distribution over its inputs.
+		This implies that the activation level of a neuron is a representation of a probability.
+		The input is present in a set of visible neurons.
+		It can extract statistical structure information in a set of hidden neurons.
+		We use maximum likelihood learning to update the weights aiming for a accurate top-down reconstruction.
+		The most probable configurations of hidden and visible neurons are specified by the energy function based on the connection weights.
+		
+		These characteristics of RBMs allows us to use a stack of them, a DBN, to learn multiple levels of representation and thus better hidden representations that can serve as examples of a class.
+		The DBN is trained with the constrastive divergence algorithm, reducing the discrepancy between the real and the learned probability distribution.
+		
+		Perceprton	
+		
+		Feed Forward Neural Netowrks....
 		
 	
 	\section{Hyper Parameters}
-		After some testing, I used a DBN with 2 hidden layers of size 1000 and compared it with a similar FFNN.
-		The best found parameters where: k = 1 (...), learning rate of 0.1 without decay (...), 
-		Constant momentum of 0.9.
-		Weights decay of 0.00001 
-		.........
+		The parameters used can be found in the following table.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\textbf{Parameter} 		& \textbf{Value} 	\\ \hline
+				Hidden Layers Sizes 	& $ 1000,1000 $    	\\ \hline
+				Gibbs Sampling Steps (k)&  $ 1 $      		\\ \hline
+				Learning Rate			&  $ 0.1 $     		\\ \hline
+				Initial Momentum		&  $ 0.9 $    		\\ \hline
+				Final Momentum			&  $ 0.9 $    		\\ \hline
+				Weight Decay			&  $ 0.00001 $      \\ \hline
+			\end{tabular}
+			\caption{Hyper Parameters of the Deep Belief Network}
+			\label{tab:pars}
+		\end{table}
 		
 		These parameters were isolated and tested, i.e. starting from the 1st lab parameters, I changed only one of the parameters and found the best value, did this for all parameters and use the best of each in this final combination.
 		This, obviously does not guarantee the best results, because the parameters can be the best when isolated but not the best combination of all of them.
 		We can although consider these values as a good approximation to the best case.
 		The objective was to reduce the average reconstruction error in the DBN training phase.
 		
+		Enabling learning rate decay decreased the average reconstruction error but the weight representations were not as expected, due to a very small gradient, so it will be disable in this case.	
+		The Xavier weights initialization is also disabled because it did not produce any measurable performance improvement.
 		
+		To serve as comparison we can use Feed Forward Neural Networks, one with 1 hidden layer and another with 2 hiddden layers, all of size $ 1000 $.
 		
+		The Perceptron and FFNNs were trained in the same way, using an stochastic gradient descent optimizer with learning rate of $ 0.05 $ and the cross entropy loss function, for $ 1000 $ epochs. 
+				
 		
+	\section{Results}
 		
-		
-		
-		
-	\section{Results}	
-			The DBN took 474 seconds to train (7 minutes and 53 seconds).
-			The Perceptron was trained in 453 seconds (7 minutes and 33 seconds).
-			The FFNN was trained in 60 epochs to achieve a training time close to the sum of the DBN and Perceptron training time, 932 seconds (15mins 32 secs).
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					DBN 					&  $ 474 s $    \\ \hline
+					Perceptron 				&  $ 453 s $      \\ \hline
+					FFNN with 1 layer		&  $ 932 s $     \\ \hline
+					FFNN with 2 layers		&  $ 927 s $    \\ \hline
+				\end{tabular}
+				\caption{Training Time}
+				\label{tab:Ttime}
+			\end{table}
+			To achieve a training time close to the sum of the DBN and Perceptron training time, the FFNN with 2 hidden layers was trained in 60 epochs and the one with 1 hidden layer was trained in 150 epochs.
 			
+		\subsection{Accuracy}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					DBN 					&  $ 61.95\% $    \\ \hline
+					FFNN with 1 layer		&  $ 30.76\% $     \\ \hline
+					FFNN with 2 layers		&  $ 14.37\% $    \\ \hline
+				\end{tabular}
+				\caption{Accuracy}
+				\label{tab:acc}
+			\end{table}
+			The DBN accuracy is a very good result, given that the EMNIST article \cite{emnist} shows an 64\% result for a OPIUM-based model with hidden layer size of $ 1000 $.
+			The FFNNs produce lower accuracy as expected, the addition of a second hidden layer significantly decreased accuracy. %%%% PQ???	
 			
-	
 	
 		\subsection{Representations}
-			
 			\begin{figure}[H]
-				\centering
-				\includegraphics[width=.7\linewidth]{0.1_1.png}  
-				\caption{Representation of the 1st hidden layer}
-				\label{fig:rep1}
+				\begin{subfigure}{.49\textwidth}
+					\centering
+					\includegraphics[width=.99\linewidth]{0.1_1.png}  
+					\caption{Representation of the 1st hidden layer}
+					\label{fig:rep1}
+				\end{subfigure}
+				\begin{subfigure}{.49\textwidth}
+					\centering
+					\includegraphics[width=.99\linewidth]{0.1_2.png}  
+					\caption{Representation of the 2nd hidden layer}
+					\label{fig:rep2}
+				\end{subfigure}
+				\caption{Representations of the DBN hidden layers}
+				\label{fig:rep}
 			\end{figure}
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=.7\linewidth]{0.1_2.png}  
-				\caption{Representation of the 2nd hidden layer}
-				\label{fig:rep2}
-			\end{figure}
-			
-			These results show ...
+			These results show simple feat...
+			The 2nd hidden layer representation is a bit more ....
 		
 		\subsection{Dendrograms}
 		
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=.99\linewidth]{dend1.png}  
+				\includegraphics[width=.8\linewidth]{dend1.png}  
 				\caption{Dendrogram for 1st hidden layer}
 				\label{fig:dend1}
 			\end{figure}
 		
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=.99\linewidth]{dend2.png}  
+				\includegraphics[width=.8\linewidth]{dend2.png}  
 				\caption{Dendrogram for 2nd hidden layer}
 				\label{fig:dend2}
 			\end{figure}
 		
-			These results show ...
-		
-		
-		
-		
+			These results show 
+
 		
 		\subsection{Confusion Matrix}	
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=.7\linewidth]{confmatBlue2.png}    %{confmat.png}  
+				\includegraphics[width=.6\linewidth]{confmatBlue2.png} %{confmat.png}  
 				\caption{Confusion Matrix}
 				\label{fig:confmat}
 			\end{figure}
@@ -118,24 +166,20 @@
 		\subsection{Robustness to Noise}	
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=.7\linewidth]{noise2.png}   % robnoise.png
+				\includegraphics[width=.5\linewidth]{noise2.png} % robnoise.png
 				\caption{Robustness to noise}
 				\label{fig:robNoise}
 			\end{figure}
 		
+			The FFNN with 2 hidden layers is generally worst.
+			The DBN has the best accuracy until 30\% noise level.
+			The FFNN clearly are less affected by noise.
+			....
 		
 		
-	\section{References}
 		
+		%% BIBLIOGRAPHY	
 		\printbibliography
-		
-		
-	
-	
-	
-	
-	
-	
 			
 \end{document}
 
