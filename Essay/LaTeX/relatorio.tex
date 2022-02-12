@@ -45,9 +45,11 @@
 		These characteristics of RBMs allows us to use a stack of them, a DBN, to learn multiple levels of representation and thus better hidden representations that can serve as examples of a class.
 		The DBN is trained with the constrastive divergence algorithm, reducing the discrepancy between the real and the learned probability distribution.
 		
-		Perceprton	
+		A Perceptorn is a simple neural network model with a set of inputs and a single binary output.
+		We can hereby use a set of 47 Perceptrons, one corresponding to each class, to classify the samples, using the final hidden layer of the DBN as their inputs.
 		
-		Feed Forward Neural Netowrks....
+		Feedforward Neural Networks are multiple layers of Perceptrons, having one or more hidden layers.
+		In this case, we use the Rectified Linear Unit activation function to avoid the weakening of the error gradient.
 		
 	
 	\section{Hyper Parameters}
@@ -130,8 +132,8 @@
 				\caption{Representations of the DBN hidden layers}
 				\label{fig:rep}
 			\end{figure}
-			These results show simple feat...
-			The 2nd hidden layer representation is a bit more ....
+			These results can be interpreted as the parts of the images that are selected by each neuron of the hidden layer.
+			The 2nd hidden layer representation has no significantly noticeable feature selection, only some differences between each weight.
 		
 		\subsection{Dendrograms}
 		
@@ -149,9 +151,12 @@
 				\label{fig:dend2}
 			\end{figure}
 		
-			These results show 
-
-		
+			 These figures shows that the both hidden representation evaluates "l" and "1" as the most similar symbols, "L" is the next most similar to both.
+			 Other similar symbols are: "F" and "f", "g" and "q".
+			 The easiest distinctions for the model to make are represented as the first branching when reading from top to bottom.
+			 The second hidden representation shows more uniform branching.
+			 As an example, we can see "n" and "r" are only part of 3 chunks in the first hidden representation, on the second, the minimum is 4 chunks. 
+			 
 		\subsection{Confusion Matrix}	
 			\begin{figure}[H]
 				\centering
@@ -159,9 +164,16 @@
 				\caption{Confusion Matrix}
 				\label{fig:confmat}
 			\end{figure}
-			We can clearly see the similarities between letters as an human expects.
-			"q" and "9", "L" and "1" .....
+		
+			The confusion matrix shows the correspondence between the predicted label and the true label.
+			This allows us to check model errors and thus what cinfuses the model.
+			The ideal confusion matrix would have only nonzeros in the diagonal.
 			
+			The highest values outside the diagonal are the most similar symbols found by the model.
+			These results are equivalent to the dendograms, largest values in the confusion matrix correspond to lower clades in the dendograms.
+			
+			The largest values are for: "L" labeled as "1", "F" labeled as "f", "I" as "1" and "q" as "9".
+			 
 			
 		\subsection{Robustness to Noise}	
 			\begin{figure}[H]
@@ -176,10 +188,13 @@
 			The FFNN clearly are less affected by noise.
 			....
 		
+	\section{Conclusion}
+		We...
+	
 		
 		
-		%% BIBLIOGRAPHY	
-		\printbibliography
+	%% BIBLIOGRAPHY	
+	\printbibliography
 			
 \end{document}
 
