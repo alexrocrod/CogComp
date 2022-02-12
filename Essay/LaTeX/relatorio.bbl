@@ -61,6 +61,38 @@
       \verb 1702.05373
       \endverb
     \endentry
+    \entry{ExpEMNIST}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7f31493ad6af93748173ffd6640ce67c}{%
+           family={Wenkel},
+           familyi={W\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f31493ad6af93748173ffd6640ce67c}
+      \strng{fullhash}{7f31493ad6af93748173ffd6640ce67c}
+      \strng{bibnamehash}{7f31493ad6af93748173ffd6640ce67c}
+      \strng{authorbibnamehash}{7f31493ad6af93748173ffd6640ce67c}
+      \strng{authornamehash}{7f31493ad6af93748173ffd6640ce67c}
+      \strng{authorfullhash}{7f31493ad6af93748173ffd6640ce67c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.simonwenkel.com/2019/07/16/exploring-EMNIST.html}}
+      \field{note}{[Online; accessed 11-Fev-2022]}
+      \field{title}{{Exploring EMNIST}}
+      \field{year}{2019}
+    \endentry
+    \entry{Dends}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://wheatoncollege.edu/wp-content/uploads/2012/08/How-to-Read-a-Dendrogram-Web-Ready.pdf}}
+      \field{note}{[Online; accessed 11-Fev-2022]}
+      \field{title}{{How to Read a Dendrogram}}
+      \field{year}{2012}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
